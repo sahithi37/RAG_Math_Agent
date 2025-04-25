@@ -19,16 +19,6 @@ This project implements an **Agentic-RAG architecture** to simulate a math profe
 
 ## 🚀 Architecture Flow
 
-graph TD
-    A[User Query] --> B[Input Guardrail]
-    B --> C[Check KB in Qdrant]
-    C -->|Match Found| D[Use GPT to explain KB content]
-    C -->|No Match| E[Use Tavily Web Search]
-    E --> F[Use GPT to explain Web content]
-    D --> G[Output Guardrail]
-    F --> G
-    G --> H[Answer + Feedback Logging]
-
 ![image](https://github.com/user-attachments/assets/9197a918-d14e-4759-9b28-8a90dadd1baf)
 
 ## 📚 Knowledge Base
