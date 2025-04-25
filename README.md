@@ -65,6 +65,8 @@ To run the app with Streamlit:
 ```bash
 streamlit run app/streamlit.py
 
+----
+
 **## 📦 Requirements**
 
 Install dependencies with:
