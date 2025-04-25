@@ -29,6 +29,8 @@ graph TD
     F --> G
     G --> H[Answer + Feedback Logging]
 
+![image](https://github.com/user-attachments/assets/9197a918-d14e-4759-9b28-8a90dadd1baf)
+
 ## 📚 Knowledge Base
 
 - **Dataset:** [JEEBench (HuggingFace)](https://huggingface.co/datasets/daman1209arora/jeebench)
