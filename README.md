@@ -29,4 +29,47 @@ graph TD
     F --> G
     G --> H[Answer + Feedback Logging]
 
+## 📚 Knowledge Base
+
+- **Dataset:** [JEEBench (HuggingFace)](https://huggingface.co/datasets/daman1209arora/jeebench)
+- **Vector DB:** Qdrant (with OpenAI Embeddings)
+- **Storage:** Built with `llama-index` to persist embeddings and perform top-1 similarity search
+
+---
+
+## 🌐 Web Search
+
+- Uses **Tavily API** for fallback search when the KB doesn't contain a good match
+- Fetched content is piped into **GPT-3.5 Turbo** for clean explanation
+
+---
+
+## 🔐 Guardrails
+
+- **Input Guardrail (DSPy):** Accepts only math-related academic questions
+- **Output Guardrail (DSPy):** Blocks hallucinated or off-topic content
+
+---
+
+## 👨‍🏫 Human-in-the-Loop Feedback
+
+- Streamlit UI allows students to give 👍 / 👎 after seeing the answer
+- Feedback is logged to a local JSON file for future improvement
+
+---
+
+## 📊 Benchmarking
+
+- Evaluated on **50 random JEEBench Math Questions**
+- **Current Accuracy:** 66%
+- Benchmark results saved to: `benchmark/results.csv`
+
+---
+
+## 🚀 Demo
+
+To run the app with Streamlit:
+
+```bash
+streamlit run app/streamlit.py
 
