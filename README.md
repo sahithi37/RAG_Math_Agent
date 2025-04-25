@@ -19,17 +19,16 @@ This project implements an **Agentic-RAG architecture** to simulate a math profe
 
 ## 🚀 Architecture Flow
 
-```mermaid
 graph TD
-  A[User Query] --> B[Input Guardrail]
-  B --> C{Check Vector DB (Qdrant)}
-  C -- Match Found --> D[GPT Explanation on KB Content]
-  C -- No Match --> E[Tavily Web Search]
-  E --> F[GPT Explanation on Web Content]
-  D --> G[Output Guardrail]
-  F --> G
-  G --> H[Answer Displayed + Feedback Logging]
----
+    A[User Query] --> B[Input Guardrail]
+    B --> C[Check KB in Qdrant]
+    C -->|Match Found| D[Use GPT to explain KB content]
+    C -->|No Match| E[Use Tavily Web Search]
+    E --> F[Use GPT to explain Web content]
+    D --> G[Output Guardrail]
+    F --> G
+    G --> H[Answer + Feedback Logging]
+
 
 ## 📦 Installation
 
