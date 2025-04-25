@@ -30,9 +30,3 @@ graph TD
     G --> H[Answer + Feedback Logging]
 
 
-## 📦 Installation
-
-```bash
-git clone https://github.com/sahithi37/math-agent.git
-cd math-agent
-pip install -r requirements.txt
