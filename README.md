@@ -58,7 +58,7 @@ This project implements an **Agentic-RAG architecture** to simulate a math profe
 
 ---
 
-## 🚀 Demo
+## 🚀 Demo 
 
 To run the app with Streamlit:
 
@@ -67,9 +67,10 @@ streamlit run app/streamlit.py
 
 ----
 
-**## 📦 Requirements**
 
-Install dependencies with:
+## 📦 Requirements
 
 ```bash
 pip install -r requirements.txt
+
+
