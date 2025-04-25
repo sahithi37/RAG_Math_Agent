@@ -19,23 +19,21 @@ This project implements an **Agentic-RAG architecture** to simulate a math profe
 
 ## 🚀 Architecture Flow
 
-User Query → Input Guardrail
-↓
-Check Vector DB (Qdrant)
-↓
-If Match Found → GPT Explanation on Matched KB
-Else → Tavily Web Search → GPT Explanation
-↓
-Output Guardrail
-↓
-Answer Displayed + Feedback Logged
-
-
+```mermaid
+graph TD
+  A[User Query] --> B[Input Guardrail]
+  B --> C{Check Vector DB (Qdrant)}
+  C -- Match Found --> D[GPT Explanation on KB Content]
+  C -- No Match --> E[Tavily Web Search]
+  E --> F[GPT Explanation on Web Content]
+  D --> G[Output Guardrail]
+  F --> G
+  G --> H[Answer Displayed + Feedback Logging]
 ---
 
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/math-agent.git
+git clone https://github.com/sahithi37/math-agent.git
 cd math-agent
 pip install -r requirements.txt
